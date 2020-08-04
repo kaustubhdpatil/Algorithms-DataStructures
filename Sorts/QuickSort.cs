@@ -4,12 +4,14 @@ namespace Sorts
 {
     public class QuickSort : ISortable
     {
-        public void Sort(int[] arrayToSort)
+        public int[] Sort(int[] arrayToSort)
         {
             if (arrayToSort.Length > 1)
             {
                 this.Sort(arrayToSort, 0, arrayToSort.Length - 1);
             }
+
+            return arrayToSort;
         }
 
         private void Sort(int[] arrayToSort, int left, int right)

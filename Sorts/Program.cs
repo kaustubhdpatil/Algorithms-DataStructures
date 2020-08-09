@@ -85,9 +85,9 @@ namespace Sorts
 
         static void Main(string[] args)
         {
-            Console.WriteLine("".PadLeft(25, '='));
+            Console.WriteLine(string.Empty.PadLeft(25, '='));
             Console.WriteLine("Welcome to sorting");
-            Console.WriteLine("".PadLeft(25, '='));
+            Console.WriteLine(string.Empty.PadLeft(25, '='));
             ReadData();
             Console.ReadKey();
         }

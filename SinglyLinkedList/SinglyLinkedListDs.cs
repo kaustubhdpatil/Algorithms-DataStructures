@@ -4,6 +4,7 @@ using System;
 public class SinglyLinkedListDs : ILinkedList
 {
     private Node head = null;
+    private int length = 0;
 
     // getter property to hold the head
     public Node Head
@@ -14,12 +15,22 @@ public class SinglyLinkedListDs : ILinkedList
         }
     }
 
+    // getter property to hold length of linked list
+    public int Length
+    {
+        get
+        {
+            return this.length;
+        }
+    }
+
     // function to add new node at the end
     public void InsertAtTheEnd(int valueToInsert)
     {
         if (this.head == null)
         {
             this.head = new Node(valueToInsert);
+            this.length++;
             return;
         }
 
@@ -32,6 +43,7 @@ public class SinglyLinkedListDs : ILinkedList
 
         Node newNode = new Node(valueToInsert);
         nodeToInsertAfter.Next = newNode;
+        this.length++;
     }
 
     // function to print the list
@@ -67,6 +79,7 @@ public class SinglyLinkedListDs : ILinkedList
             this.head = node.Next;
             node.Next = null;
             node = null;
+            this.length--;
             return;
         }
 
@@ -80,6 +93,7 @@ public class SinglyLinkedListDs : ILinkedList
                 previousNode.Next = nextNode.Next;
                 nextNode.Next = null;
                 nextNode = null;
+                this.length--;
                 return;
             }
 
@@ -111,5 +125,11 @@ public class SinglyLinkedListDs : ILinkedList
         }
 
         return false;
+    }
+
+    // function to check if linkedlist is empty or not
+    public bool IsEmpty()
+    {
+        return this.head == null;
     }
 }

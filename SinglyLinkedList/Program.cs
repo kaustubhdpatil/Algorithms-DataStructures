@@ -19,6 +19,8 @@ namespace SinglyLinkedList
                 Console.WriteLine("Welcome to a linked list implementation example");
                 Console.WriteLine("Generating a sample linked list...");
                 ILinkedList linkedListDs = new SinglyLinkedListDs();
+                Console.WriteLine($"Linked List IsEmpty? {linkedListDs.IsEmpty()}");
+                Console.WriteLine($"Linked List length: {linkedListDs.Length}");
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -27,6 +29,7 @@ namespace SinglyLinkedList
 
                 Console.WriteLine("Linked list generation complete!");
                 Console.WriteLine("Printing linked list..");
+                Console.WriteLine($"Linked List length: {linkedListDs.Length}");
                 Console.WriteLine("".PadLeft(20,'-'));
                 linkedListDs.Print();
 
@@ -46,6 +49,7 @@ namespace SinglyLinkedList
                 for (int i = 1; i < 11; i++)
                 {
                     DeleteAndPrint(i, linkedListDs);
+                    Console.WriteLine($"Linked List length: {linkedListDs.Length}");
                 }
 
                 DeleteAndPrint(100, linkedListDs);

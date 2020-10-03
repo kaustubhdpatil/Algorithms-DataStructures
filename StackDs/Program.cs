@@ -9,7 +9,7 @@ namespace StackDs
             Console.WriteLine("Welcome to a stack implementation example");
             Console.WriteLine("Generating a sample stack...");
             IStack stack = new StackDataStructure();
-            Console.WriteLine($"Linked List IsEmpty? {stack.IsEmpty()}");
+            Console.WriteLine($"Stack IsEmpty? {stack.IsEmpty()}");
 
             for (int i = 0; i < 10; i++)
             {
